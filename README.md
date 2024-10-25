@@ -1,9 +1,9 @@
 # substrate-tip-bot
 
-[![GitHub Issue Sync](https://github.com/paritytech/substrate-tip-bot/actions/workflows/github-issue-sync.yml/badge.svg)](https://github.com/paritytech/substrate-tip-bot/actions/workflows/github-issue-sync.yml)
+[![GitHub Issue Sync](https://github.com/BitFancy/substrate-tip-bot/actions/workflows/github-issue-sync.yml/badge.svg)](https://github.com/BitFancy/substrate-tip-bot/actions/workflows/github-issue-sync.yml)
 
 > A GitHub App built with [Probot](https://github.com/probot/probot) that can submit tips on behalf
-> of a [Substrate](https://github.com/paritytech/substrate) based network.
+> of a [Substrate](https://github.com/BitFancy/substrate) based network.
 
 # Getting started 🌱
 
@@ -11,7 +11,7 @@
 
 This bot relies on GitHub pull request that opt in via a body text comment (or text in profile bio) to specify what Substrate network and address to send tips to.  
 
-Permission to send out tips is limited for a GitHub team, that's configured with `APPROVERS_GH_ORG` + `APPROVERS_GH_TEAM` environment variables. For production, it's [@paritytech/tip-bot-approvers](https://github.com/orgs/paritytech/teams/tip-bot-approvers)  
+Permission to send out tips is limited for a GitHub team, that's configured with `APPROVERS_GH_ORG` + `APPROVERS_GH_TEAM` environment variables. For production, it's [@BitFancy/tip-bot-approvers](https://github.com/orgs/BitFancy/teams/tip-bot-approvers)  
 
 ### Pull request body
 
@@ -49,7 +49,7 @@ $ cp .env.example .env
 
 ### Run network locally
 
-- Follow readme in https://github.com/paritytech/polkadot#development to run local network. 
+- Follow readme in https://github.com/BitFancy/polkadot#development to run local network. 
   - Among all dependencies, main steps are (from repo): 
     - Compile `cargo b -r`
     - Run `./target/release/polkadot --dev`
@@ -139,7 +139,7 @@ For the E2E tests, we need a modified Rococo node in a way that speeds up the re
 ### Preparing and running Rococo
 
 ```bash
-git clone https://github.com/paritytech/polkadot-sdk.git
+git clone https://github.com/BitFancy/polkadot-sdk.git
 cd polkadot-sdk
 git checkout polkadot-v1.15.0
 git apply ../polkadot.e2e.patch
@@ -170,7 +170,7 @@ On CI, the E2E tests are running:
 
 The tests are running in a container specified by `E2E_TESTS_CONTAINER` [repository variable](https://docs.github.com/en/actions/learn-github-actions/variables#defining-configuration-variables-for-multiple-workflows).
 
-The container version should be kept in sync with the container used in [`polkadot-sdk` CI](https://github.com/paritytech/polkadot-sdk/blob/polkadot-v1.7.2/.github/workflows/fmt-check.yml#L18).
+The container version should be kept in sync with the container used in [`polkadot-sdk` CI](https://github.com/BitFancy/polkadot-sdk/blob/polkadot-v1.7.2/.github/workflows/fmt-check.yml#L18).
 
 ## Contributing
 
